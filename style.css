@@ -1,0 +1,88 @@
+body {
+  background: #e0f7e9;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  color: #003366;
+}
+
+/* Поле */
+.court {
+  position: relative;
+  width: 610px;   /* 6.10 м */
+  height: 1340px; /* 13.40 м */
+  margin: 20px auto;
+  background: #c9f0d9;
+  border: 4px solid #003366;
+}
+
+/* Сітка */
+.net {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: red;
+}
+
+/* Лінії подачі */
+.short-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #003366;
+}
+
+.short-top {
+  top: calc(50% - 198px); /* 1.98 м від сітки */
+}
+
+.short-bottom {
+  top: calc(50% + 198px);
+}
+
+/* Довгі лінії подачі для пар */
+.long-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #003366;
+}
+
+.long-top {
+  top: 76px; /* 0.76 м від краю */
+}
+
+.long-bottom {
+  bottom: 76px;
+}
+
+/* Центр (вертикальна лінія) */
+.center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #003366;
+}
+
+/* Лінії для одиночної гри */
+.single {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: green;
+}
+
+.single.left {
+  left: 46px; /* (6.10 - 5.18)/2 = 0.46 м = 46px */
+}
+
+.single.right {
+  right: 46px;
+}
