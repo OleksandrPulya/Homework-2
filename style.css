@@ -1,88 +1,79 @@
-body {
-  background: #e0f7e9;
-  font-family: Arial;
-  text-align: center;
-}
-
-h1 {
-  color: #003366;
-}
-
-/* Горизонтальне поле (після повороту) */
 .court {
   position: relative;
-  width: 1340px;  /* тепер довжина горизонтально */
-  height: 610px;  /* ширина вертикально */
+  width: 820px;
+  height: 360px;
+  background: #5dc46a;
   margin: 20px auto;
-  background: #c9f0d9;
-  border: 4px solid #003366;
+  border: 4px solid #000000;
 }
 
-/* Сітка (вертикальна, посередині) */
 .net {
-  position: absolute;
-  left: 50%;
+  position: absolute;            
+  left: 410px;
   top: 0;
-  width: 2px;
-  height: 100%;
-  background: red;
+  width: 2px;                    
+  height: 360px;
+  background: repeating-linear-gradient(
+    #ffffff 0 6px,
+    transparent 6px 12px
+  );
 }
 
-/* Лінії подачі (зліва і справа від сітки) */
-.short-line {
+.inner-border {
+  position: absolute;            
+  left: 40px;
+  top: 30px;
+  width: 740px;
+  height: 300px;
+  border: 2px solid #ffffff;
+}
+
+.short {
   position: absolute;
-  height: 100%;
   width: 2px;
-  background: #003366;
+  top: 30px;
+  height: 302px;
+  background: #ffffff;
 }
 
-.short-left {
-  left: calc(50% - 198px); /* 1.98 м від сітки */
-}
+.short.left { left: 270px; }
+.short.right { right: 270px; }
 
-.short-right {
-  left: calc(50% + 198px);
-}
-
-/* Довгі лінії подачі для пар */
-.long-line {
+.long {
   position: absolute;
-  height: 100%;
   width: 2px;
-  background: #003366;
+  top: 30px;
+  height: 302px;
+  background: #ffffff;
 }
 
-.long-left {
-  left: 76px; /* 0.76 м від краю */
-}
+.long.left { left: 70px; }
+.long.right { right: 70px; }
 
-.long-right {
-  right: 76px;
-}
-
-/* Центр (горизонтальна лінія) */
-.center-line {
+.inner-line {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
   height: 2px;
-  background: #003366;
+  background: #ffffff;
+  left: 40px;
+  right: 37px;
 }
 
-/* Лінії для одиночної гри (всередині зверху і знизу) */
-.single {
+.inner-line.top { top: 50px; }
+.inner-line.bottom { bottom: 50px; }
+
+.center {
   position: absolute;
-  left: 0;
-  right: 0;
+  top: 180px;
   height: 2px;
-  background: green;
+  background: #ffffff;           
 }
 
-.single.top {
-  top: 46px; /* 0.46 м від краю */
+.center.left { 
+  left: 40px;
+  width: 230px;
 }
 
-.single.bottom {
-  bottom: 46px;
+.center.right {
+  right: 38px;
+  width: 232px;
 }
